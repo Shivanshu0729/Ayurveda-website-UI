@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayurveda Kendra — Sacred Healing</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="loader">
+    <div class="loader-mandala">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="90" stroke="#c9a84c" stroke-width="0.5" stroke-dasharray="4 6"/>
+        <circle cx="100" cy="100" r="70" stroke="#c9a84c" stroke-width="0.5"/>
+        <circle cx="100" cy="100" r="50" stroke="#c9a84c" stroke-width="1"/>
+        <circle cx="100" cy="100" r="8" fill="#c9a84c"/>
+        <line x1="100" y1="10" x2="100" y2="190" stroke="#c9a84c" stroke-width="0.5"/>
+        <line x1="10" y1="100" x2="190" y2="100" stroke="#c9a84c" stroke-width="0.5"/>
+        <line x1="29" y1="29" x2="171" y2="171" stroke="#c9a84c" stroke-width="0.5"/>
+        <line x1="171" y1="29" x2="29" y2="171" stroke="#c9a84c" stroke-width="0.5"/>
+      </svg>
+    </div>
+    <p class="loader-text">Ayurveda Kendra</p>
+  </div>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <nav id="navbar">
+    <a href="#home" class="nav-logo">
+      <span class="logo-ak">AK</span>
+      <span class="logo-full">Ayurveda Kendra</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#services" class="nav-link">Treatments</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#register" class="nav-link">Join Us</a></li>
+    </ul>
+    <div class="nav-right">
+      <button id="themeToggle" class="theme-btn" title="Toggle Theme">
+        <span class="material-symbols-outlined" id="themeIcon">light_mode</span>
+      </button>
+      <a href="tel:+911234567890" class="nav-btn">
+        <span class="material-symbols-outlined" style="font-size:16px;">call</span> Call
+      </a>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-bg-text">AYURVEDA</div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-line"></span>
+        Est. 1998 · New Delhi, India
+        <span class="eyebrow-line"></span>
+      </div>
+      <h1 class="hero-h1">
+        Sacred<br/><em>Ancient</em><br/>Healing
+      </h1>
+      <p class="hero-p">5,000 years of Ayurvedic wisdom, restored for the modern soul. Discover your dosha, transform your life.</p>
+      <div class="hero-actions">
+        <a href="#register" class="btn-gold">Begin Your Journey</a>
+        <a href="#services" class="btn-ghost-gold">Explore Treatments</a>
+      </div>
+    </div>
+    <div class="hero-stats-panel">
+      <div class="hero-stat">
+        <span class="stat-num">25+</span>
+        <span class="stat-lbl">Years</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="hero-stat">
+        <span class="stat-num">12k+</span>
+        <span class="stat-lbl">Patients</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="hero-stat">
+        <span class="stat-num">100%</span>
+        <span class="stat-lbl">Natural</span>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>Panchakarma</span><span class="dot">✦</span>
+      <span>Shirodhara</span><span class="dot">✦</span>
+      <span>Abhyanga</span><span class="dot">✦</span>
+      <span>Yoga & Pranayama</span><span class="dot">✦</span>
+      <span>Herbal Medicine</span><span class="dot">✦</span>
+      <span>Dosha Analysis</span><span class="dot">✦</span>
+      <span>Nasya Therapy</span><span class="dot">✦</span>
+      <span>Basti Treatment</span><span class="dot">✦</span>
+      <span>Panchakarma</span><span class="dot">✦</span>
+      <span>Shirodhara</span><span class="dot">✦</span>
+      <span>Abhyanga</span><span class="dot">✦</span>
+      <span>Yoga & Pranayama</span><span class="dot">✦</span>
+      <span>Herbal Medicine</span><span class="dot">✦</span>
+      <span>Dosha Analysis</span><span class="dot">✦</span>
+      <span>Nasya Therapy</span><span class="dot">✦</span>
+      <span>Basti Treatment</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <section id="services" class="services">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">What We Offer</div>
+      <h2 class="section-title">Ancient Treatments,<br/><em>Timeless Results</em></h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal" data-delay="0">
+        <div class="card-number">01</div>
+        <div class="card-icon-wrap">
+          <div class="card-icon">🌿</div>
+        </div>
+        <h3 class="card-title">Panchakarma</h3>
+        <p class="card-desc">Deep cellular detoxification using five classical Ayurvedic procedures. Resets the body and mind at its deepest levels.</p>
+        <div class="card-line"></div>
+      </div>
+      <div class="service-card reveal" data-delay="100">
+        <div class="card-number">02</div>
+        <div class="card-icon-wrap">
+          <div class="card-icon">💧</div>
+        </div>
+        <h3 class="card-title">Shirodhara</h3>
+        <p class="card-desc">A continuous stream of warm medicated oil poured over the third eye. Profound stillness for the overworked mind.</p>
+        <div class="card-line"></div>
+      </div>
+      <div class="service-card reveal" data-delay="200">
+        <div class="card-number">03</div>
+        <div class="card-icon-wrap">
+          <div class="card-icon">🤲</div>
+        </div>
+        <h3 class="card-title">Abhyanga</h3>
+        <p class="card-desc">Full-body warm oil massage using herbal formulations matched to your dosha. Nourishes tissues, calms the nervous system.</p>
+        <div class="card-line"></div>
+      </div>
+      <div class="service-card reveal" data-delay="300">
+        <div class="card-number">04</div>
+        <div class="card-icon-wrap">
+          <div class="card-icon">🧘</div>
+        </div>
+        <h3 class="card-title">Yoga & Pranayama</h3>
+        <p class="card-desc">Classical yoga sequences combined with breathwork and meditation, calibrated to your constitution and health goals.</p>
+        <div class="card-line"></div>
+      </div>
+      <div class="service-card reveal" data-delay="400">
+        <div class="card-number">05</div>
+        <div class="card-icon-wrap">
+          <div class="card-icon">🌱</div>
+        </div>
+        <h3 class="card-title">Herbal Medicine</h3>
+        <p class="card-desc">Custom Ayurvedic formulations prepared from ethically sourced plants. Your personal Vaidya creates what your body needs.</p>
+        <div class="card-line"></div>
+      </div>
+      <div class="service-card reveal" data-delay="500">
+        <div class="card-number">06</div>
+        <div class="card-icon-wrap">
+          <div class="card-icon">🍃</div>
+        </div>
+        <h3 class="card-title">Dietary Therapy</h3>
+        <p class="card-desc">Dosha-specific nutrition plans that align seasonal eating with your constitution. Food as your first medicine.</p>
+        <div class="card-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="about-left reveal">
+      <div class="section-eyebrow">The Three Doshas</div>
+      <h2 class="section-title">Your unique<br/><em>constitution</em></h2>
+      <p class="about-p">In Ayurveda, every individual is a unique combination of three biological energies — Vata, Pitta, and Kapha — known as doshas. Understanding yours is the foundation of all healing.</p>
+
+      <div class="dosha-cards">
+        <div class="dosha-card vata">
+          <div class="dosha-symbol">V</div>
+          <div class="dosha-info">
+            <div class="dosha-name">Vata</div>
+            <div class="dosha-element">Air + Space</div>
+            <div class="dosha-desc">Governs movement, creativity, and the nervous system. Vata types are quick, imaginative, and sensitive.</div>
+          </div>
+        </div>
+        <div class="dosha-card pitta">
+          <div class="dosha-symbol">P</div>
+          <div class="dosha-info">
+            <div class="dosha-name">Pitta</div>
+            <div class="dosha-element">Fire + Water</div>
+            <div class="dosha-desc">Governs digestion, intelligence, and transformation. Pitta types are sharp, driven, and intense.</div>
+          </div>
+        </div>
+        <div class="dosha-card kapha">
+          <div class="dosha-symbol">K</div>
+          <div class="dosha-info">
+            <div class="dosha-name">Kapha</div>
+            <div class="dosha-element">Earth + Water</div>
+            <div class="dosha-desc">Governs structure, immunity, and stability. Kapha types are calm, nurturing, and grounded.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-right reveal">
+      <div class="about-quote-block">
+        <div class="quote-mark">"</div>
+        <blockquote>When diet is wrong, medicine is of no use. When diet is correct, medicine is of no need.</blockquote>
+        <cite>— Ayurvedic Proverb</cite>
+      </div>
+      <div class="about-pillars">
+        <div class="pillar-item">
+          <span class="pillar-icon material-symbols-outlined">eco</span>
+          <div>
+            <div class="pillar-title">100% Natural</div>
+            <div class="pillar-sub">All herbs ethically sourced</div>
+          </div>
+        </div>
+        <div class="pillar-item">
+          <span class="pillar-icon material-symbols-outlined">verified</span>
+          <div>
+            <div class="pillar-title">Certified Vaidyas</div>
+            <div class="pillar-sub">Classical Ayurvedic doctors</div>
+          </div>
+        </div>
+        <div class="pillar-item">
+          <span class="pillar-icon material-symbols-outlined">person_pin</span>
+          <div>
+            <div class="pillar-title">Personalised Care</div>
+            <div class="pillar-sub">No two treatments alike</div>
+          </div>
+        </div>
+        <div class="pillar-item">
+          <span class="pillar-icon material-symbols-outlined">history</span>
+          <div>
+            <div class="pillar-title">25+ Years</div>
+            <div class="pillar-sub">Of trusted healing</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRATION -->
+  <section id="register" class="register">
+    <div class="register-bg-text">JOIN</div>
+    <div class="register-inner">
+      <div class="register-left reveal">
+        <div class="section-eyebrow">Begin Your Journey</div>
+        <h2 class="section-title">Join<br/><em>Ayurveda Kendra</em></h2>
+        <p class="register-p">Fill in your details and our Vaidya team will reach out within 24 hours to craft your personalised wellness programme.</p>
+        <div class="register-promise">
+          <span class="material-symbols-outlined" style="color:#c9a84c;font-size:20px;">lock</span>
+          Your information is private and will never be shared.
+        </div>
+      </div>
+
+      <form class="reg-form reveal" id="regForm">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="f-name">Full Name *</label>
+            <input type="text" id="f-name" placeholder="Your full name" required />
+          </div>
+          <div class="form-field">
+            <label for="f-age">Age</label>
+            <input type="number" id="f-age" placeholder="Your age" min="1" max="120" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="f-gender">Gender</label>
+            <select id="f-gender">
+              <option value="" disabled selected>Select gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Prefer not to say</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="f-locality">Locality / City</label>
+            <input type="text" id="f-locality" placeholder="Your area or city" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="f-email">Email Address *</label>
+            <input type="email" id="f-email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-field">
+            <label for="f-phone">Phone Number</label>
+            <input type="tel" id="f-phone" placeholder="+91 00000 00000" />
+          </div>
+        </div>
+        <button type="submit" class="btn-gold-full" id="submitBtn">
+          <span id="btnText">Submit Application</span>
+          <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span>
+        </button>
+        <div class="success-banner" id="successBanner">
+          <span class="material-symbols-outlined">check_circle</span>
+          Namaste! We'll reach out to you within 24 hours 🙏
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">Ayurveda<span>Kendra</span></div>
+        <p class="footer-tagline">Ancient wisdom. Modern healing.<br/>One life at a time.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" title="Instagram">
+            <span class="material-symbols-outlined">photo_camera</span>
+          </a>
+          <a href="#" class="social-btn" title="Facebook">
+            <span class="material-symbols-outlined">group</span>
+          </a>
+          <a href="mailto:info@ayurvedakendra.com" class="social-btn" title="Email">
+            <span class="material-symbols-outlined">mail</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links-group">
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <a href="#home">Home</a>
+          <a href="#services">Treatments</a>
+          <a href="#about">About</a>
+          <a href="#register">Join Us</a>
+        </div>
+        <div class="footer-col">
+          <h4>Treatments</h4>
+          <a href="#">Panchakarma</a>
+          <a href="#">Shirodhara</a>
+          <a href="#">Abhyanga</a>
+          <a href="#">Herbal Medicine</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="tel:+911234567890">+91 12345 67890</a>
+          <a href="mailto:info@ayurvedakendra.com">info@ayurvedakendra.com</a>
+          <a href="#">Lajpat Nagar, New Delhi</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Ayurveda Kendra. All rights reserved.</span>
+      <span>Crafted with care &amp; tradition ✦</span>
+    </div>
+  </footer>
+
+  <button class="chat-fab" id="chatToggle">
+    <span class="material-symbols-rounded fab-open">mode_comment</span>
+    <span class="material-symbols-outlined fab-close">close</span>
+  </button>
+
+  <div class="chatbot-window" id="chatWindow">
+    <div class="chatbot-header">
+      <div class="chatbot-header-left">
+        <div class="chatbot-avatar">
+          <span class="material-symbols-outlined" style="font-size:20px;">spa</span>
+        </div>
+        <div>
+          <div class="chatbot-name">Ayurveda AI</div>
+          <div class="chatbot-online">● Online</div>
+        </div>
+      </div>
+      <button class="chatbot-close-btn" id="chatClose">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <ul class="chatbox" id="chatbox">
+      <li class="chat incoming">
+        <div class="chat-avatar-sm">
+          <span class="material-symbols-outlined" style="font-size:14px;">spa</span>
+        </div>
+        <div class="bubble">Namaste 🙏 I'm your Ayurveda guide. Ask me about treatments, doshas, or how to join!</div>
+      </li>
+    </ul>
+    <div class="chat-input-row">
+      <textarea id="chatInput" placeholder="Ask about Ayurveda…" rows="1"></textarea>
+      <button class="chat-send" id="sendBtn">
+        <span class="material-symbols-rounded" style="font-size:18px;">send</span>
+      </button>
+    </div>
+  </div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
