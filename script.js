@@ -1,5 +1,3 @@
-const GROQ_MODEL = "llama-3.1-8b-instant";
-
 window.addEventListener("load", () => {
   setTimeout(() => {
     const loader = document.getElementById("loader");
@@ -94,32 +92,51 @@ const successBanner = document.getElementById("successBanner");
 const submitBtn = document.getElementById("submitBtn");
 
 if (regForm) {
-  regForm.addEventListener("submit", (e) => {
+  regForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    // Animate button
+    const name = document.getElementById("f-name").value.trim();
+    const age = document.getElementById("f-age").value.trim();
+    const gender = document.getElementById("f-gender").value;
+    const locality = document.getElementById("f-locality").value.trim();
+    const email = document.getElementById("f-email").value.trim();
+    const phone = document.getElementById("f-phone").value.trim();
+
+    if (!name || !email) {
+      successBanner.textContent = "Please provide your name and email to continue.";
+      successBanner.classList.add("show", "error");
+      setTimeout(() => successBanner.classList.remove("show", "error"), 5000);
+      return;
+    }
+
     submitBtn.textContent = "Submitting...";
     submitBtn.disabled = true;
 
-    setTimeout(() => {
-      // Show success
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, age, gender, locality, email, phone })
+      });
+
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || "Unable to submit the form.");
+
+      successBanner.innerHTML = `<span class="material-symbols-outlined">check_circle</span> Namaste! We'll reach out to you within 24 hours 🙏`;
       successBanner.classList.add("show");
 
-      // Reset button
-      submitBtn.innerHTML = `<span id="btnText">Submit Application</span>
-        <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span>`;
-      submitBtn.disabled = false;
-
-      // Clear all fields
       regForm.querySelectorAll("input, select").forEach((el) => {
         el.value = "";
       });
-
-      // Hide success after 5 seconds
-      setTimeout(() => {
-        successBanner.classList.remove("show");
-      }, 5000);
-    }, 1200);
+    } catch (error) {
+      successBanner.textContent = `⚠️ ${error.message}`;
+      successBanner.classList.add("show", "error");
+    } finally {
+      submitBtn.innerHTML = `<span id="btnText">Submit Application</span>
+        <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span>`;
+      submitBtn.disabled = false;
+      setTimeout(() => successBanner.classList.remove("show", "error"), 5000);
+    }
   });
 }
 
@@ -190,49 +207,34 @@ function sendMessage() {
   const thinkingBubble = thinkingLi.querySelector(".bubble");
   if (thinkingBubble) thinkingBubble.classList.add("thinking");
 
-  fetch("https://api.groq.com/openai/v1/chat/completions", {
+  fetch("/api/chat", {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${GROQ_API_KEY}`
+      "Content-Type": "application/json"
     },
-    body: JSON.stringify({
-      model: GROQ_MODEL,
-      max_tokens: 300,
-      temperature: 0.7,
-      messages: [
-        {
-          role: "system",
-          content: `You are a warm, conversational Ayurveda guide for Ayurveda Kendra. 
-          Respond naturally to whatever the user says. Answer ONLY what they specifically ask. 
-          Do NOT list out treatments or give a welcome speech unless explicitly asked. 
-          If they just say 'Hi', just say hello back and ask how you can help. 
-          Keep replies short (1-3 sentences). Occasionally use 🙏 or 🌿. 
-          Gently mention the registration form only if they want to book or need personalized advice. 
-          No medical diagnoses.`
-        },
-        {
-          role: "user",
-          content: msg
-        }
-      ]
-    })
+    body: JSON.stringify({ message: msg })
   })
   .then(async (res) => {
     if (!res.ok) {
-      const errData = await res.json();
-      throw new Error(errData.error?.message || "Unknown API Error");
+      const text = await res.text();
+      let errData = {};
+      try {
+        errData = JSON.parse(text);
+      } catch (err) {
+        // ignore parse error, fallback to raw text
+      }
+      throw new Error(errData.error?.message || text || "Unknown API Error");
     }
-    return res.json();
-  })
-  .then((data) => {
-    thinkingLi.remove(); 
-    if (data.choices && data.choices[0] && data.choices[0].message) {
-      const reply = data.choices[0].message.content.trim();
-      createBubble(reply, "incoming");
-    } else {
+
+    const data = await res.json();
+    if (!data || !data.reply) {
       throw new Error("Received empty response from AI");
     }
+    return data.reply;
+  })
+  .then((reply) => {
+    thinkingLi.remove();
+    createBubble(reply, "incoming");
   })
   .catch((error) => {
     console.error("Groq API Error:", error);

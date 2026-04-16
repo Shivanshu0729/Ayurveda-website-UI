@@ -770,6 +770,11 @@ cite {
   animation: fadeUp 0.4s ease;
 }
 .success-banner.show { display: flex; }
+.success-banner.error {
+  background: rgba(255, 85, 85, 0.12);
+  border-color: rgba(255, 85, 85, 0.35);
+  color: #ff8b8b;
+}
 .success-banner .material-symbols-outlined { font-size: 20px; }
 
 /* ── FOOTER ── */
