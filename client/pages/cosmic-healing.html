@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayurveda Kendra | Cosmic Healing Dimension</title>
+  <link rel="stylesheet" href="../css/cosmic-healing.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet" />
+</head>
+<body>
+  <canvas id="cosmicCanvas" aria-hidden="true"></canvas>
+
+  <header class="topbar glass">
+    <a href="chatbot.html#dimensions" class="back-link">
+      <span class="material-symbols-outlined">arrow_back</span>
+      Back To Main Experience
+    </a>
+    <button id="cosmicThemeToggle" class="theme-toggle" type="button">
+      <span class="material-symbols-outlined" id="cosmicThemeIcon">light_mode</span>
+      Toggle Theme
+    </button>
+  </header>
+
+  <main>
+    <section class="cosmic-hero reveal">
+      <p class="hero-tag">Ayurveda Kendra | Immersive Universe</p>
+      <h1>Out Of The World<br/><em>Healing Interface</em></h1>
+      <p class="hero-copy">A futuristic sanctuary where timeless Ayurveda meets cinematic 3D visuals, adaptive ambience, and powerful interaction design.</p>
+      <div class="hero-actions">
+        <a href="#zones" class="btn-primary">Explore Zones</a>
+        <a href="#ritual" class="btn-ghost">View Ritual Engine</a>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric glass">
+          <span class="num">360°</span>
+          <span class="lbl">Immersive Motion</span>
+        </div>
+        <div class="metric glass">
+          <span class="num">2 Modes</span>
+          <span class="lbl">Day + Night Optimized</span>
+        </div>
+        <div class="metric glass">
+          <span class="num">3D</span>
+          <span class="lbl">Depth Driven UI</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="zones" class="zones reveal">
+      <div class="section-head">
+        <p class="mini">Healing Destinations</p>
+        <h2>Choose Your Energy Zone</h2>
+      </div>
+      <div class="zone-grid">
+        <article class="zone-card glass" data-tilt>
+          <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80" alt="Sunrise mountains" loading="lazy" />
+          <div class="zone-content">
+            <span>Zone 01</span>
+            <h3>Solar Vitality Dome</h3>
+            <p>High-frequency routines for movement, metabolic activation, and daytime confidence.</p>
+          </div>
+        </article>
+        <article class="zone-card glass" data-tilt>
+          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=80" alt="Healing water and rock" loading="lazy" />
+          <div class="zone-content">
+            <span>Zone 02</span>
+            <h3>Prana Flow Chamber</h3>
+            <p>Breathwork, circulation, and cleansing frameworks tuned to restore internal rhythm.</p>
+          </div>
+        </article>
+        <article class="zone-card glass" data-tilt>
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Moonlit ocean" loading="lazy" />
+          <div class="zone-content">
+            <span>Zone 03</span>
+            <h3>Lunar Recovery Vault</h3>
+            <p>Low-stimulation mode for sleep repair, nervous system reset, and deep calm.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="ritual" class="ritual reveal">
+      <div class="section-head">
+        <p class="mini">Ritual Intelligence</p>
+        <h2>Your 3D Healing Sequence</h2>
+      </div>
+      <div class="ritual-track">
+        <div class="step glass" data-delay="0">
+          <span class="step-index">01</span>
+          <h3>Constitution Scan</h3>
+          <p>Map your dominant dosha pattern and identify imbalance points.</p>
+        </div>
+        <div class="step glass" data-delay="80">
+          <span class="step-index">02</span>
+          <h3>Dynamic Protocol</h3>
+          <p>Auto-curated treatments and food guidance for your exact state.</p>
+        </div>
+        <div class="step glass" data-delay="160">
+          <span class="step-index">03</span>
+          <h3>Daily Integration</h3>
+          <p>Simple timeline with breath, herb, bodywork, and sleep anchors.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta reveal glass">
+      <h2>Ready To Begin The Most Advanced Ayurveda Experience?</h2>
+      <p>Launch from classic to cosmic in one click and start your personalized healing journey.</p>
+      <a href="chatbot.html#register" class="btn-primary">Start Now</a>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.min.js"></script>
+  <script src="../js/cosmic-healing.js"></script>
+</body>
+</html>

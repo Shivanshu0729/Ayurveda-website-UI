@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <title>Ayurveda Kendra — Sacred Healing</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../css/style.css?v=20260419" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" rel="stylesheet" />
@@ -38,7 +41,9 @@
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#dimensions" class="nav-link">Experience</a></li>
       <li><a href="#services" class="nav-link">Treatments</a></li>
+      <li><a href="#pathways" class="nav-link">Pathways</a></li>
       <li><a href="#about" class="nav-link">About</a></li>
       <li><a href="#register" class="nav-link">Join Us</a></li>
     </ul>
@@ -56,6 +61,9 @@
   </nav>
 
   <section id="home" class="hero">
+    <canvas id="hero3dCanvas" aria-hidden="true"></canvas>
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
     <div class="hero-particles" id="particles"></div>
     <div class="hero-bg-text">AYURVEDA</div>
     <div class="hero-content">
@@ -70,6 +78,7 @@
       <p class="hero-p">5,000 years of Ayurvedic wisdom, restored for the modern soul. Discover your dosha, transform your life.</p>
       <div class="hero-actions">
         <a href="#register" class="btn-gold">Begin Your Journey</a>
+        <a href="#pathways" class="btn-ghost-gold">Choose Your Path</a>
         <a href="#services" class="btn-ghost-gold">Explore Treatments</a>
       </div>
     </div>
@@ -92,6 +101,67 @@
     <div class="scroll-indicator">
       <span>Scroll</span>
       <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <section id="immersive" class="immersive-gallery">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Immersive Healing Spaces</div>
+      <h2 class="section-title">A 3D Wellness Gallery,<br/><em>Built For Impact</em></h2>
+    </div>
+    <div class="gallery-grid">
+      <article class="gallery-card reveal" data-delay="0" data-tilt>
+        <img src="https://images.unsplash.com/photo-1611078489935-0cb964de46d6?auto=format&fit=crop&w=1200&q=80" alt="Ayurvedic herbs and wooden bowls" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="gallery-tag">Herbal Intelligence</span>
+          <h3>Precision Formulations</h3>
+          <p>Botanical blends tailored to your body rhythm, digestion, and recovery timeline.</p>
+        </div>
+      </article>
+      <article class="gallery-card reveal" data-delay="100" data-tilt>
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80" alt="Luxury Ayurvedic oil therapy" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="gallery-tag">Therapy Architecture</span>
+          <h3>Deep Nervous System Reset</h3>
+          <p>High-touch rituals designed to calm overstimulation and restore inner balance.</p>
+        </div>
+      </article>
+      <article class="gallery-card reveal" data-delay="200" data-tilt>
+        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80" alt="Meditation and mindful breathing" loading="lazy" />
+        <div class="gallery-overlay">
+          <span class="gallery-tag">Mind-Body Systems</span>
+          <h3>Breath, Focus, Renewal</h3>
+          <p>Integrated yoga and pranayama modules that sharpen clarity and emotional stability.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="dimensions" class="dimensions">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Beyond Traditional Web</div>
+      <h2 class="section-title">Enter The Next Dimension,<br/><em>Choose Your Portal</em></h2>
+    </div>
+    <p class="dimensions-lead reveal">Open a second page crafted as a futuristic healing universe with advanced 3D visuals, premium interactions, and atmosphere-driven design.</p>
+    <div class="dimension-grid">
+      <a class="dimension-card reveal" data-delay="0" href="cosmic-healing.html?mode=day" data-tilt>
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80" alt="Sunlit mountain landscape for day mode" loading="lazy" />
+        <div class="dimension-content">
+          <span class="dimension-tag">Portal 01</span>
+          <h3>Solar Serenity Interface</h3>
+          <p>Brighter, golden, uplifting ambiance for high-energy day sessions and focused routines.</p>
+          <span class="dimension-cta">Open Day Universe</span>
+        </div>
+      </a>
+      <a class="dimension-card reveal" data-delay="140" href="cosmic-healing.html?mode=night" data-tilt>
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80" alt="Starry mountain sky for night mode" loading="lazy" />
+        <div class="dimension-content">
+          <span class="dimension-tag">Portal 02</span>
+          <h3>Lunar Deep Calm Interface</h3>
+          <p>Ambient night gradients, glowing particles, and meditative motion for evening healing.</p>
+          <span class="dimension-cta">Open Night Universe</span>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -176,6 +246,40 @@
         <p class="card-desc">Dosha-specific nutrition plans that align seasonal eating with your constitution. Food as your first medicine.</p>
         <div class="card-line"></div>
       </div>
+    </div>
+  </section>
+
+  <section id="pathways" class="pathways">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Personalised Experience</div>
+      <h2 class="section-title">Choose One Path,<br/><em>Move Forward Instantly</em></h2>
+    </div>
+    <p class="pathways-lead reveal">Select your primary focus and continue to a dedicated next page where we guide you step by step.</p>
+    <div class="pathways-grid">
+      <a class="pathway-card reveal" data-delay="0" href="journey.html?track=detox">
+        <span class="pathway-tag">Track 01</span>
+        <h3>Detox & Rebalance</h3>
+        <p>Ideal for fatigue, bloating, and toxin overload. Includes cleansing therapies and routine reset.</p>
+        <span class="pathway-action">Continue</span>
+      </a>
+      <a class="pathway-card reveal" data-delay="120" href="journey.html?track=stress">
+        <span class="pathway-tag">Track 02</span>
+        <h3>Stress & Sleep Recovery</h3>
+        <p>Designed for mental overload, anxiety, and restless sleep with gentle calming protocols.</p>
+        <span class="pathway-action">Continue</span>
+      </a>
+      <a class="pathway-card reveal" data-delay="240" href="journey.html?track=weight">
+        <span class="pathway-tag">Track 03</span>
+        <h3>Metabolism & Weight Support</h3>
+        <p>Focused on digestion, metabolism, and sustainable body transformation with dosha-aware planning.</p>
+        <span class="pathway-action">Continue</span>
+      </a>
+      <a class="pathway-card reveal" data-delay="360" href="journey.html?track=immunity">
+        <span class="pathway-tag">Track 04</span>
+        <h3>Immunity & Vitality Boost</h3>
+        <p>Build resilience, improve immunity, and restore energy using herbs, diet, and daily rhythm design.</p>
+        <span class="pathway-action">Continue</span>
+      </a>
     </div>
   </section>
 
@@ -335,7 +439,9 @@
         <div class="footer-col">
           <h4>Navigate</h4>
           <a href="#home">Home</a>
+          <a href="#dimensions">Experience</a>
           <a href="#services">Treatments</a>
+          <a href="#pathways">Pathways</a>
           <a href="#about">About</a>
           <a href="#register">Join Us</a>
         </div>
@@ -360,7 +466,7 @@
     </div>
   </footer>
 
-  <button class="chat-fab" id="chatToggle">
+  <button class="chat-fab" id="chatToggle" type="button">
     <span class="material-symbols-rounded fab-open">mode_comment</span>
     <span class="material-symbols-outlined fab-close">close</span>
   </button>
@@ -376,7 +482,7 @@
           <div class="chatbot-online">● Online</div>
         </div>
       </div>
-      <button class="chatbot-close-btn" id="chatClose">
+      <button class="chatbot-close-btn" id="chatClose" type="button">
         <span class="material-symbols-outlined">close</span>
       </button>
     </div>
@@ -390,12 +496,13 @@
     </ul>
     <div class="chat-input-row">
       <textarea id="chatInput" placeholder="Ask about Ayurveda…" rows="1"></textarea>
-      <button class="chat-send" id="sendBtn">
+      <button class="chat-send" id="sendBtn" type="button">
         <span class="material-symbols-rounded" style="font-size:18px;">send</span>
       </button>
     </div>
   </div>
 
-<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.min.js"></script>
+<script src="../js/script.js?v=20260419"></script>
 </body>
 </html>

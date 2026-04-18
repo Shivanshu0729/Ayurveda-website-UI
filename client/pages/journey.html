@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayurveda Journey Planner</title>
+  <link rel="stylesheet" href="../css/journey.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="ambient-layer"></div>
+
+  <header class="journey-header">
+    <a class="brand" href="chatbot.html">
+      <span class="brand-mark">AK</span>
+      <span>Ayurveda Journey Planner</span>
+    </a>
+    <a class="ghost-link" href="chatbot.html#pathways">Back to Pathways</a>
+  </header>
+
+  <main class="journey-shell">
+    <section class="intro-panel">
+      <p class="eyebrow">Personalised Wellness</p>
+      <h1>Step into your custom healing plan</h1>
+      <p class="intro-copy">You chose a pathway. Now answer a few details so our team can prepare a focused plan for your goals and lifestyle.</p>
+
+      <div class="track-badge" id="selectedTrackBadge">Selected: Not chosen yet</div>
+
+      <div class="progress-wrap" aria-label="Journey progress">
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <span id="progressText">Step 1 of 4</span>
+      </div>
+    </section>
+
+    <section class="form-panel">
+      <form id="journeyForm" novalidate>
+        <div class="step active" data-step="1">
+          <h2>Step 1: Primary Focus</h2>
+          <p>Select one main goal for your first month.</p>
+          <div class="option-grid" id="goalOptions">
+            <button type="button" class="option-btn" data-value="detox">Detox & Rebalance</button>
+            <button type="button" class="option-btn" data-value="stress">Stress & Sleep Recovery</button>
+            <button type="button" class="option-btn" data-value="weight">Metabolism & Weight Support</button>
+            <button type="button" class="option-btn" data-value="immunity">Immunity & Vitality Boost</button>
+          </div>
+        </div>
+
+        <div class="step" data-step="2">
+          <h2>Step 2: Personal Details</h2>
+          <p>Tell us who this plan is for.</p>
+          <div class="field-grid">
+            <label>
+              Full Name *
+              <input type="text" id="name" required placeholder="Your name" />
+            </label>
+            <label>
+              Age
+              <input type="number" id="age" min="1" max="120" placeholder="Age" />
+            </label>
+            <label>
+              Email *
+              <input type="email" id="email" required placeholder="name@email.com" />
+            </label>
+            <label>
+              Phone
+              <input type="tel" id="phone" placeholder="+91 00000 00000" />
+            </label>
+          </div>
+        </div>
+
+        <div class="step" data-step="3">
+          <h2>Step 3: Lifestyle Snapshot</h2>
+          <p>Help us shape a practical routine.</p>
+          <div class="field-grid single-col">
+            <label>
+              Sleep Pattern
+              <select id="sleepPattern">
+                <option value="">Select sleep quality</option>
+                <option value="deep">Deep and restful</option>
+                <option value="interrupted">Interrupted sleep</option>
+                <option value="late">Very late sleep schedule</option>
+                <option value="insomnia">Insomnia tendency</option>
+              </select>
+            </label>
+            <label>
+              Main Concern
+              <textarea id="mainConcern" rows="4" placeholder="Describe your current symptoms, stress pattern, or health concerns."></textarea>
+            </label>
+            <label>
+              Daily Routine Availability
+              <select id="availability">
+                <option value="">Select available time</option>
+                <option value="15 mins">Up to 15 mins/day</option>
+                <option value="30 mins">Around 30 mins/day</option>
+                <option value="60 mins">Up to 60 mins/day</option>
+                <option value="flexible">Flexible schedule</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="step" data-step="4">
+          <h2>Step 4: Review & Submit</h2>
+          <p>Confirm your details before we lock your request.</p>
+          <div class="summary-card" id="summaryCard"></div>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="secondary" id="backBtn" disabled>Back</button>
+          <button type="button" class="primary" id="nextBtn">Next</button>
+          <button type="submit" class="primary hidden" id="submitJourneyBtn">Submit Journey</button>
+        </div>
+
+        <div id="statusBanner" class="status-banner" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="../js/journey.js"></script>
+</body>
+</html>
